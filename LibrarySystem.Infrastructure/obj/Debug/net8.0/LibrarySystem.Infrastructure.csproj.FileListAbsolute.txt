@@ -1,0 +1,17 @@
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/obj/Debug/net8.0/LibrarySystem.Infrastructure.csproj.AssemblyReference.cache
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/obj/Debug/net8.0/LibrarySystem.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/obj/Debug/net8.0/LibrarySystem.Infrastructure.AssemblyInfoInputs.cache
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/obj/Debug/net8.0/LibrarySystem.Infrastructure.AssemblyInfo.cs
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/obj/Debug/net8.0/LibrarySystem.Infrastructure.csproj.CoreCompileInputs.cache
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/bin/Debug/net8.0/LibrarySystem.Infrastructure.deps.json
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/bin/Debug/net8.0/LibrarySystem.Infrastructure.runtimeconfig.json
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/bin/Debug/net8.0/LibrarySystem.Infrastructure.dll
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/bin/Debug/net8.0/LibrarySystem.Infrastructure.pdb
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/bin/Debug/net8.0/LibrarySystem.Domain.dll
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/bin/Debug/net8.0/LibrarySystem.Domain.pdb
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/obj/Debug/net8.0/LibrarySystem.Infrastructure.csproj.CopyComplete
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/obj/Debug/net8.0/LibrarySystem.Infrastructure.dll
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/obj/Debug/net8.0/refint/LibrarySystem.Infrastructure.dll
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/obj/Debug/net8.0/LibrarySystem.Infrastructure.pdb
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/obj/Debug/net8.0/LibrarySystem.Infrastructure.genruntimeconfig.cache
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/obj/Debug/net8.0/ref/LibrarySystem.Infrastructure.dll

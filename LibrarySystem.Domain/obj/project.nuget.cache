@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "rPzWJUwxaPXEzw0FuxNATzG7pmXMCpTtmGTVhZFJXWJ0Au+Keo4KLHE3YJR5bDOFsc1g+6p3AZzLKGQruyffOA==",
+  "success": true,
+  "projectFilePath": "/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Domain/LibrarySystem.Domain.csproj",
+  "expectedPackageFiles": [
+    "/home/hamza-juwaihan/.nuget/packages/mediatr/11.0.0/mediatr.11.0.0.nupkg.sha512",
+    "/home/hamza-juwaihan/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
+    "/home/hamza-juwaihan/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/11.1.0/mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
+    "/home/hamza-juwaihan/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/7.0.0/microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

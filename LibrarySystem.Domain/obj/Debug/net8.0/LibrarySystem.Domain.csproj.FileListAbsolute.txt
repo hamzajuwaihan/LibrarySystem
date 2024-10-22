@@ -1,0 +1,12 @@
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Domain/bin/Debug/net8.0/LibrarySystem.Domain.deps.json
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Domain/bin/Debug/net8.0/LibrarySystem.Domain.dll
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Domain/bin/Debug/net8.0/LibrarySystem.Domain.pdb
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Domain/obj/Debug/net8.0/LibrarySystem.Domain.csproj.AssemblyReference.cache
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Domain/obj/Debug/net8.0/LibrarySystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Domain/obj/Debug/net8.0/LibrarySystem.Domain.AssemblyInfoInputs.cache
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Domain/obj/Debug/net8.0/LibrarySystem.Domain.AssemblyInfo.cs
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Domain/obj/Debug/net8.0/LibrarySystem.Domain.csproj.CoreCompileInputs.cache
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Domain/obj/Debug/net8.0/LibrarySystem.Domain.dll
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Domain/obj/Debug/net8.0/refint/LibrarySystem.Domain.dll
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Domain/obj/Debug/net8.0/LibrarySystem.Domain.pdb
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Domain/obj/Debug/net8.0/ref/LibrarySystem.Domain.dll
