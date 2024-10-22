@@ -1,81 +1,84 @@
 using LibrarySystem.Application.Commands;
 using LibrarySystem.Application.Queries;
 using MediatR;
-using Microsoft.AspNetCore.Mvc;
 using LibrarySystem.Domain.Entities;
 namespace LibrarySystem.Api.Controllers;
 
-[ApiController]
-[Route("api/[controller]")]
-public class BooksController : ControllerBase
+
+public static class BooksEndPoint
 {
-    private readonly IMediator _mediator;
-
-    public BooksController(IMediator mediator)
+    public static void MapBooksEndpoints(this IEndpointRouteBuilder app)
     {
-        _mediator = mediator;
-    }
 
-    // POST: api/books
-    [HttpPost]
-    public async Task<IActionResult> AddBook([FromBody] AddBookCommand command)
-    {
-        if (command == null)
-            return BadRequest("Book data is required");
+        RouteGroupBuilder group = app.MapGroup("api/books");
 
-        var result = await _mediator.Send(command);
-        return CreatedAtAction(nameof(GetBookById), new { id = result.Id }, result);
-    }
+        group.MapPost("", async (AddBookCommand command, IMediator _mediator) =>
+        {
+            if (command == null)
+                return Results.BadRequest("Book data is required");
 
-    // GET: api/books/{id}
-    [HttpGet("{id}")]
-    public async Task<IActionResult> GetBookById(Guid id)
-    {
-        var query = new GetBookByIdQuery(id);
-        var book = await _mediator.Send(query);
+            Book result = await _mediator.Send(command);
+            return Results.Created($"/api/books/{result.Id}", result);
+        })
+        .Produces<Book>(StatusCodes.Status201Created)
+        .Produces(StatusCodes.Status400BadRequest)
+        .Accepts<AddBookCommand>("application/json");
 
-        if (book == null)
-            return NotFound();
 
-        return Ok(book);
-    }
+        group.MapGet("{id:Guid}", async (Guid id, IMediator _mediator) =>
+        {
 
-    // PUT: api/books/{id}
-    [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateBook(Guid id, [FromBody] Book updatedBook)
-    {
-        if (updatedBook == null || updatedBook.Id != id)
-            return BadRequest("Invalid book data");
+            GetBookByIdQuery query = new GetBookByIdQuery(id);
+            Book book = await _mediator.Send(query);
 
-        var updateCommand = new UpdateBookCommand(updatedBook);
-        var result = await _mediator.Send(updateCommand);
+            if (book == null)
+                return Results.NotFound();
 
-        if (result == null)
-            return NotFound();
+            return Results.Ok(book);
+        })
+        .Produces<Book>(StatusCodes.Status200OK)
+        .Produces(StatusCodes.Status404NotFound);
 
-        return Ok(result);
-    }
+        group.MapPut("{id:guid}", async (Guid id, IMediator _mediator, UpdateBookCommand updatedBook) =>
+        {
+            if (updatedBook == null || updatedBook.Id != id)
+                return Results.BadRequest("Invalid book data");
 
-    // DELETE: api/books/{id}
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteBook(Guid id)
-    {
-        var command = new DeleteBookCommand(id);
-        var result = await _mediator.Send(command);
 
-        if (!result)
-            return NotFound();
+            Book result = await _mediator.Send(updatedBook);
 
-        return NoContent();
-    }
+            if (result == null)
+                return Results.NotFound();
 
-    // GET: api/books
-    [HttpGet]
-    public async Task<IActionResult> GetAllBooks()
-    {
-        var query = new GetAllBooksQuery();
-        var books = await _mediator.Send(query);
+            return Results.Ok(result);
+        })
+        .Produces<Book>(StatusCodes.Status202Accepted)
+        .Produces(StatusCodes.Status404NotFound)
+        .Accepts<UpdateBookCommand>("application/json");
 
-        return Ok(books);
+        group.MapDelete("{id:guid}", async (Guid id, IMediator _mediator) =>
+        {
+            DeleteBookCommand command = new DeleteBookCommand(id);
+            bool result = await _mediator.Send(command);
+
+            if (!result)
+                return Results.NotFound();
+
+            return Results.NoContent();
+
+        })
+        .Produces(StatusCodes.Status204NoContent)
+        .Produces(StatusCodes.Status404NotFound);
+
+        group.MapGet("", async (IMediator _mediator) =>
+        {
+            GetAllBooksQuery query = new GetAllBooksQuery();
+            List<Book> books = await _mediator.Send(query);
+
+            return Results.Ok(books);
+        })
+        .Produces<List<Book>>(StatusCodes.Status200OK);
+
+
     }
 }

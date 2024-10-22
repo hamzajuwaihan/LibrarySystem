@@ -15,3 +15,4 @@
 /home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/obj/Debug/net8.0/refint/LibrarySystem.Application.dll
 /home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/obj/Debug/net8.0/LibrarySystem.Application.pdb
 /home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/obj/Debug/net8.0/ref/LibrarySystem.Application.dll
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/obj/Debug/net8.0/LibrarySystem.Application.sourcelink.json

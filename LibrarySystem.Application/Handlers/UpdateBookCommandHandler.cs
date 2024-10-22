@@ -13,13 +13,26 @@ public class UpdateBookCommandHandler : IRequestHandler<UpdateBookCommand, Book>
     {
         _bookRepoistory = bookRepository;
     }
+    public static Book ToBook(UpdateBookCommand command)
+    {
+        return new Book(
+            command.Id,
+            command.Title,
+            command.AuthorId,
+            command.ISBN,
+            command.PublishedDate,
+            command.AvailableCopies
+        );
+    }
 
     public async Task<Book> Handle(UpdateBookCommand updateBookCommand, CancellationToken cancellationToken)
     {
 
         try
         {
-            Book updatedBook = await _bookRepoistory.UpdateAsync(updateBookCommand.Book);
+            Book bookToUpdate = ToBook(updateBookCommand);
+
+            Book updatedBook = await _bookRepoistory.UpdateAsync(bookToUpdate);
 
             return updatedBook;
         }

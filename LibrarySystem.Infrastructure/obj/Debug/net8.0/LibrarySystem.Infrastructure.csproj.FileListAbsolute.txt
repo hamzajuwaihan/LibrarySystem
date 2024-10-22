@@ -15,3 +15,4 @@
 /home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/obj/Debug/net8.0/LibrarySystem.Infrastructure.pdb
 /home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/obj/Debug/net8.0/LibrarySystem.Infrastructure.genruntimeconfig.cache
 /home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/obj/Debug/net8.0/ref/LibrarySystem.Infrastructure.dll
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/obj/Debug/net8.0/LibrarySystem.Infrastructure.sourcelink.json

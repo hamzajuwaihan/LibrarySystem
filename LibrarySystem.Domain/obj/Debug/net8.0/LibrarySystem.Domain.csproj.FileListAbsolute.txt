@@ -10,3 +10,4 @@
 /home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Domain/obj/Debug/net8.0/refint/LibrarySystem.Domain.dll
 /home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Domain/obj/Debug/net8.0/LibrarySystem.Domain.pdb
 /home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Domain/obj/Debug/net8.0/ref/LibrarySystem.Domain.dll
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Domain/obj/Debug/net8.0/LibrarySystem.Domain.sourcelink.json

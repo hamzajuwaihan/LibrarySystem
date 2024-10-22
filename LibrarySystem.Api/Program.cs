@@ -3,12 +3,12 @@ using LibrarySystem.Infrastructure.Repositories;
 using MediatR;
 using LibrarySystem.Infrastructure.DB;
 using Microsoft.EntityFrameworkCore;
+using LibrarySystem.Api.Controllers;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-builder.Services.AddControllers();
+
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(AddBookCommand).Assembly));
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 
@@ -30,10 +30,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.MapGet("/", () => "Hello World!");
+
+app.MapBooksEndpoints();
 
 // app.UseHttpsRedirection();
-app.UseAuthorization();
-app.MapControllers();
+// app.UseAuthorization();
 
 app.Run();
