@@ -15,7 +15,7 @@ namespace LibrarySystem.Infrastructure.Migrations
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
-#pragma warning disable 612, 618
+
             modelBuilder
                 .HasAnnotation("ProductVersion", "8.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
@@ -69,7 +69,7 @@ namespace LibrarySystem.Infrastructure.Migrations
                     b.Navigation("ISBN")
                         .IsRequired();
                 });
-#pragma warning restore 612, 618
+
         }
     }
 }

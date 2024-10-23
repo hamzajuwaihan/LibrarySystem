@@ -1,12 +1,11 @@
 using MediatR;
 
 namespace LibrarySystem.Application.Commands;
-
-public class DeleteBookCommand : IRequest<bool>
+/// <summary>
+/// Delete book command to send for MideatR
+/// </summary>
+/// <param name="id"></param>
+public class DeleteBookCommand(Guid id) : IRequest<bool>
 {
-    public Guid Id {get; private init;}
-
-    public DeleteBookCommand(Guid id){
-        this.Id = id;
-    }
+    public Guid Id { get; private init; } = id;
 }

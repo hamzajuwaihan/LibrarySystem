@@ -1,25 +1,20 @@
 using Microsoft.EntityFrameworkCore;
 using LibrarySystem.Domain.Entities;
 
-namespace LibrarySystem.Infrastructure.DB
+namespace LibrarySystem.Infrastructure.DB;
+
+public class DbAppContext(DbContextOptions<DbAppContext> options) : DbContext(options)
 {
-    public class DbAppContext : DbContext
+    public DbSet<Book> Books { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        public DbAppContext(DbContextOptions<DbAppContext> options)
-            : base(options) { }
+        modelBuilder.Entity<Book>().HasKey(b => b.Id);
 
-        public DbSet<Book> Books { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            // Define your schema if needed
-            modelBuilder.Entity<Book>().HasKey(b => b.Id);
-
-             modelBuilder.Entity<Book>()
-                .OwnsOne(b => b.ISBN, isbn =>
-                {
-                    isbn.Property(i => i.Value).HasColumnName("ISBN");
-                });
-        }
+         modelBuilder.Entity<Book>()
+            .OwnsOne(b => b.ISBN, isbn =>
+            {
+                isbn.Property(i => i.Value).HasColumnName("ISBN");
+            });
     }
 }

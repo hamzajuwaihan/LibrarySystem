@@ -1,28 +1,20 @@
-namespace LibrarySystem.Domain.ValueObjects
+namespace LibrarySystem.Domain.ValueObjects;
+
+public class ISBN(string value)
 {
-    public class ISBN
+    public string Value { get; private set; } = value;
+
+    public override bool Equals(object? obj)
     {
-        public string Value { get; private set; }
-
-        public ISBN(string value)
+        if (obj is ISBN isbn)
         {
-            // You can add validation for ISBN format here
-            Value = value;
+            return Value == isbn.Value;
         }
+        return false;
+    }
 
-        // Override Equals and GetHashCode for proper comparison
-        public override bool Equals(object obj)
-        {
-            if (obj is ISBN isbn)
-            {
-                return Value == isbn.Value;
-            }
-            return false;
-        }
-
-        public override int GetHashCode()
-        {
-            return Value.GetHashCode();
-        }
+    public override int GetHashCode()
+    {
+        return Value.GetHashCode();
     }
 }

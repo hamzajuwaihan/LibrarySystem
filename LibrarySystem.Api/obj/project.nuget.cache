@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "O0SOrQ10oksfvmC1e6CmOhWuMPJOf/LzgzoNbP4yy9FliRaDutEnTBu6xIRUtxgh9aF/Kd9LElJfBuSzbVwS5Q==",
+  "dgSpecHash": "Qrovk/1iEHYyiXCT4oX1e1cTSG2bStY4KF0uDyWzNjBQ2K0p+vS1LttXPjQbWZVTRb0o0hLudGm6jG+r2FcrkQ==",
   "success": true,
   "projectFilePath": "/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Api/LibrarySystem.Api.csproj",
   "expectedPackageFiles": [
+    "/home/hamza-juwaihan/.nuget/packages/fluentvalidation/11.10.0/fluentvalidation.11.10.0.nupkg.sha512",
+    "/home/hamza-juwaihan/.nuget/packages/fluentvalidation.dependencyinjectionextensions/11.10.0/fluentvalidation.dependencyinjectionextensions.11.10.0.nupkg.sha512",
     "/home/hamza-juwaihan/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/hamza-juwaihan/.nuget/packages/mediatr/12.4.1/mediatr.12.4.1.nupkg.sha512",
     "/home/hamza-juwaihan/.nuget/packages/mediatr.contracts/2.0.1/mediatr.contracts.2.0.1.nupkg.sha512",

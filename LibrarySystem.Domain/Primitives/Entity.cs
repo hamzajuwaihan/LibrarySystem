@@ -1,48 +1,42 @@
-using System;
-
-namespace LibrarySystem.Domain.Primitives
+namespace LibrarySystem.Domain.Primitives;
+/// <summary>
+/// Entity class Abtraction of Any Domain Entity, Any domain Entity should be inherited by this class
+/// </summary>
+/// <param name="id"></param>
+public abstract class Entity(Guid id) : IEquatable<Entity>
 {
-    public abstract class Entity : IEquatable<Entity>
+    public Guid Id { get; private init; } = id;
+
+    public static bool operator ==(Entity? first, Entity? second)
     {
-        protected Entity(Guid id)
-        {
-            Id = id;
-        }
+        return first is not null && second is not null && first.Equals(second);
+    }
 
-        public Guid Id { get; private init; } // init will set the Id once and then it won't be available to be used
+    public static bool operator !=(Entity? first, Entity? second)
+    {
 
-        public static bool operator ==(Entity? first, Entity? second)
-        {
-            return first is not null && second is not null && first.Equals(second);
-            // Note here that we are using `Equals()` that we already implemented.
-        }
+        return !(first == second);
+    }
 
-        public static bool operator !=(Entity? first, Entity? second)
-        {
-            // Here we are using the `== operator` that we already implemented
-            return !(first == second);
-        }
 
-        // This method is coming from the `IEquatable<Entity>`
-        public bool Equals(Entity? other)
-        {
-            if (other is null) { return false; }
-            if (other.GetType() != this.GetType()) { return false; }
-            return other.Id == this.Id;
-        }
+    public bool Equals(Entity? other)
+    {
+        if (other is null) { return false; }
+        if (other.GetType() != this.GetType()) { return false; }
+        return other.Id == this.Id;
+    }
 
-        // This will check the equality between 2 objects
-        public override bool Equals(object? obj)
-        {
-            if (obj is null) { return false; }
-            if (obj.GetType() != this.GetType()) { return false; }
-            if (obj is not Entity entity) { return false; }
-            return entity.Id == this.Id;
-        }
 
-        public override int GetHashCode()
-        {
-            return Id.GetHashCode() * 41; // You can replace 41 with any prime number
-        }
+    public override bool Equals(object? obj)
+    {
+        if (obj is null) { return false; }
+        if (obj.GetType() != this.GetType()) { return false; }
+        if (obj is not Entity entity) { return false; }
+        return entity.Id == this.Id;
+    }
+
+    public override int GetHashCode()
+    {
+        return Id.GetHashCode() * 41; // You can replace 41 with any prime number
     }
 }

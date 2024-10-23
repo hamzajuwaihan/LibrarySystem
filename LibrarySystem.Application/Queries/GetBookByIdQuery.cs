@@ -1,16 +1,12 @@
 using MediatR;
-using System;
 using LibrarySystem.Domain.Entities;
 
-namespace LibrarySystem.Application.Queries
+namespace LibrarySystem.Application.Queries;
+/// <summary>
+/// GetBookByIdQuery class for MideatR
+/// </summary>
+/// <param name="bookId"></param>
+public class GetBookByIdQuery(Guid bookId) : IRequest<Book>
 {
-    public class GetBookByIdQuery : IRequest<Book>
-    {
-        public Guid BookId { get; }
-
-        public GetBookByIdQuery(Guid bookId)
-        {
-            BookId = bookId;
-        }
-    }
+    public Guid BookId { get; } = bookId;
 }

@@ -2,6 +2,7 @@ using LibrarySystem.Application.Commands;
 using LibrarySystem.Application.Queries;
 using MediatR;
 using LibrarySystem.Domain.Entities;
+using FluentValidation;
 namespace LibrarySystem.Api.Controllers;
 
 
@@ -12,8 +13,13 @@ public static class BooksEndPoint
 
         RouteGroupBuilder group = app.MapGroup("api/books");
 
-        group.MapPost("", async (AddBookCommand command, IMediator _mediator) =>
+        group.MapPost("", async (AddBookCommand command, IValidator<AddBookCommand> validator, IMediator _mediator) =>
         {
+            FluentValidation.Results.ValidationResult validationResult = await validator.ValidateAsync(command);
+
+            if (!validationResult.IsValid)
+                return Results.BadRequest(validationResult.Errors);
+
             if (command == null)
                 return Results.BadRequest("Book data is required");
 
@@ -31,24 +37,27 @@ public static class BooksEndPoint
             GetBookByIdQuery query = new GetBookByIdQuery(id);
             Book book = await _mediator.Send(query);
 
-            if (book == null)
-                return Results.NotFound();
+            if (book == null) return Results.NotFound();
 
             return Results.Ok(book);
         })
         .Produces<Book>(StatusCodes.Status200OK)
         .Produces(StatusCodes.Status404NotFound);
 
-        group.MapPut("{id:guid}", async (Guid id, IMediator _mediator, UpdateBookCommand updatedBook) =>
+        group.MapPut("{id:guid}", async (Guid id, IMediator _mediator, IValidator<UpdateBookCommand> validator, UpdateBookCommand updatedBook) =>
         {
+            FluentValidation.Results.ValidationResult validationResult = await validator.ValidateAsync(updatedBook);
+
+            if (!validationResult.IsValid)
+                return Results.BadRequest(validationResult.Errors);
+
             if (updatedBook == null || updatedBook.Id != id)
                 return Results.BadRequest("Invalid book data");
 
 
             Book result = await _mediator.Send(updatedBook);
 
-            if (result == null)
-                return Results.NotFound();
+            if (result == null) return Results.NotFound();
 
             return Results.Ok(result);
         })
@@ -61,8 +70,7 @@ public static class BooksEndPoint
             DeleteBookCommand command = new DeleteBookCommand(id);
             bool result = await _mediator.Send(command);
 
-            if (!result)
-                return Results.NotFound();
+            if (!result) return Results.NotFound();
 
             return Results.NoContent();
 
@@ -78,7 +86,5 @@ public static class BooksEndPoint
             return Results.Ok(books);
         })
         .Produces<List<Book>>(StatusCodes.Status200OK);
-
-
     }
 }

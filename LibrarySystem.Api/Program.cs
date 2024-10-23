@@ -4,27 +4,29 @@ using MediatR;
 using LibrarySystem.Infrastructure.DB;
 using Microsoft.EntityFrameworkCore;
 using LibrarySystem.Api.Controllers;
+using FluentValidation;
+using LibrarySystem.Application.CommandHandlers;
+using LibrarySystem.Api.Abstractions;
 
 
-var builder = WebApplication.CreateBuilder(args);
+WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(AddBookCommand).Assembly));
 builder.Services.AddScoped<IBookRepository, BookRepository>();
 
 
-// Configure PostgreSQL database context
-builder.Services.AddDbContext<DbAppContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("LibraryDatabase")));
+builder.Services.AddDbContext<DbAppContext>(options => options.UseNpgsql(builder.Configuration.GetConnectionString("LibraryDatabase")));
 
 
-// Swagger for API documentation
+builder.Services.AddValidatorsFromAssemblyContaining<AddBookCommandValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<UpdateBookCommandHandler>();
+
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var app = builder.Build();
+WebApplication app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
