@@ -1,6 +1,6 @@
 using LibrarySystem.Domain.Entities;
 
-namespace LibrarySystem.Infrastructure.Repositories;
+namespace LibrarySystem.infrastructure.Repositories;
 
 public interface IAuthorRepository
 {

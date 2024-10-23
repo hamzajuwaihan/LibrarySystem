@@ -1,8 +1,8 @@
 using LibrarySystem.Domain.Entities;
-using LibrarySystem.Infrastructure.DB;
+using LibrarySystem.Infrastructure.EFCore.DB;
 using Microsoft.EntityFrameworkCore;
 
-namespace LibrarySystem.Infrastructure.Repositories;
+namespace LibrarySystem.infrastructure.Repositories;
 /// <summary>
 /// Book Repository that handles Book operations on DB
 /// </summary>

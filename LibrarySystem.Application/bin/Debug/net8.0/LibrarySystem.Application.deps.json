@@ -9,7 +9,8 @@
       "LibrarySystem.Application/1.0.0": {
         "dependencies": {
           "LibrarySystem.Domain": "1.0.0",
-          "LibrarySystem.Infrastructure": "1.0.0"
+          "LibrarySystem.infrastructure": "1.0.0",
+          "MediatR": "12.4.1"
         },
         "runtime": {
           "LibrarySystem.Application.dll": {}
@@ -23,28 +24,29 @@
           }
         }
       },
-      "MediatR/11.0.0": {
+      "MediatR/12.4.1": {
         "dependencies": {
-          "MediatR.Contracts": "1.0.1"
+          "MediatR.Contracts": "2.0.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2"
         },
         "runtime": {
-          "lib/netstandard2.1/MediatR.dll": {
-            "assemblyVersion": "11.0.0.0",
-            "fileVersion": "11.0.0.0"
+          "lib/net6.0/MediatR.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.4.1.0"
           }
         }
       },
-      "MediatR.Contracts/1.0.1": {
+      "MediatR.Contracts/2.0.1": {
         "runtime": {
           "lib/netstandard2.0/MediatR.Contracts.dll": {
-            "assemblyVersion": "1.0.1.0",
-            "fileVersion": "1.0.1.0"
+            "assemblyVersion": "2.0.1.0",
+            "fileVersion": "2.0.1.0"
           }
         }
       },
       "MediatR.Extensions.Microsoft.DependencyInjection/11.1.0": {
         "dependencies": {
-          "MediatR": "11.0.0",
+          "MediatR": "12.4.1",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.2"
         },
         "runtime": {
@@ -578,14 +580,23 @@
           "LibrarySystem.Domain.dll": {}
         }
       },
-      "LibrarySystem.Infrastructure/1.0.0": {
+      "LibrarySystem.infrastructure/1.0.0": {
+        "dependencies": {
+          "LibrarySystem.Domain": "1.0.0",
+          "LibrarySystem.infrastructure.EFCore": "1.0.0"
+        },
+        "runtime": {
+          "LibrarySystem.infrastructure.dll": {}
+        }
+      },
+      "LibrarySystem.infrastructure.EFCore/1.0.0": {
         "dependencies": {
           "LibrarySystem.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "8.0.10",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.10"
         },
         "runtime": {
-          "LibrarySystem.Infrastructure.dll": {}
+          "LibrarySystem.infrastructure.EFCore.dll": {}
         }
       }
     }
@@ -603,19 +614,19 @@
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
     },
-    "MediatR/11.0.0": {
+    "MediatR/12.4.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-8klzVGZQiA2oxZRzQFBZbdPD/IQUm9RYtfiyTDKhxDQ99Gi93+GXt1ZJjH2D7Lh7ZFHCv5XdkwbmfHEQBCatPg==",
-      "path": "mediatr/11.0.0",
-      "hashPath": "mediatr.11.0.0.nupkg.sha512"
+      "sha512": "sha512-0tLxCgEC5+r1OCuumR3sWyiVa+BMv3AgiU4+pz8xqTc+2q1WbUEXFOr7Orm96oZ9r9FsldgUtWvB2o7b9jDOaw==",
+      "path": "mediatr/12.4.1",
+      "hashPath": "mediatr.12.4.1.nupkg.sha512"
     },
-    "MediatR.Contracts/1.0.1": {
+    "MediatR.Contracts/2.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-NsRvOxthhkYml4DcBMyJsmym8C4MchioH7wxKVPEg7plFj9Euh/i4IcmZ3Gvgx6+K8obeuhPeJdoBl56wnuo3A==",
-      "path": "mediatr.contracts/1.0.1",
-      "hashPath": "mediatr.contracts.1.0.1.nupkg.sha512"
+      "sha512": "sha512-FYv95bNT4UwcNA+G/J1oX5OpRiSUxteXaUt2BJbRSdRNiIUNbggJF69wy6mnk2wYToaanpdXZdCwVylt96MpwQ==",
+      "path": "mediatr.contracts/2.0.1",
+      "hashPath": "mediatr.contracts.2.0.1.nupkg.sha512"
     },
     "MediatR.Extensions.Microsoft.DependencyInjection/11.1.0": {
       "type": "package",
@@ -888,7 +899,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "LibrarySystem.Infrastructure/1.0.0": {
+    "LibrarySystem.infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LibrarySystem.infrastructure.EFCore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

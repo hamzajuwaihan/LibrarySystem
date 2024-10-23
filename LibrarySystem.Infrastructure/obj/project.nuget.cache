@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DgiDRpsGTA1UP73Q2yl2JNvmWy1L+sleahDP/r5yWOs+8rwPYZ/8HcjA0dDp+i6i47QBOEcTPrSjkQUnOXY4aQ==",
+  "dgSpecHash": "V0LxFVrLHHC9C+R1cKFc1AnVLAibnQK8Rl6sXQsC9ZWywgLvfmdvE7R6Yb5WYo/EFp/1PGgKCM1YUQO5go45DA==",
   "success": true,
-  "projectFilePath": "/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/LibrarySystem.Infrastructure.csproj",
+  "projectFilePath": "/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/LibrarySystem.infrastructure.csproj",
   "expectedPackageFiles": [
     "/home/hamza-juwaihan/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/hamza-juwaihan/.nuget/packages/mediatr/11.0.0/mediatr.11.0.0.nupkg.sha512",

@@ -1,6 +1,6 @@
 using LibrarySystem.Application.Queries;
 using LibrarySystem.Domain.Entities;
-using LibrarySystem.Infrastructure.Repositories;
+using LibrarySystem.infrastructure.Repositories;
 using MediatR;
 
 

@@ -380,7 +380,7 @@
           }
         },
         "build": {
-          "build/net8.0/Microsoft.EntityFrameworkCore.Design.props": {}
+          "build/net8.0/_._": {}
         }
       },
       "Microsoft.EntityFrameworkCore.Relational/8.0.10": {
@@ -872,6 +872,21 @@
         },
         "runtime": {
           "bin/placeholder/LibrarySystem.Domain.dll": {}
+        }
+      },
+      "LibrarySystem.infrastructure.EFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "LibrarySystem.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Design": "8.0.10",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.10"
+        },
+        "compile": {
+          "bin/placeholder/LibrarySystem.infrastructure.EFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LibrarySystem.infrastructure.EFCore.dll": {}
         }
       }
     }
@@ -2203,13 +2218,17 @@
       "type": "project",
       "path": "../LibrarySystem.Domain/LibrarySystem.Domain.csproj",
       "msbuildProject": "../LibrarySystem.Domain/LibrarySystem.Domain.csproj"
+    },
+    "LibrarySystem.infrastructure.EFCore/1.0.0": {
+      "type": "project",
+      "path": "../LibrarySystem.Infrastructure.EFCore/LibrarySystem.infrastructure.EFCore.csproj",
+      "msbuildProject": "../LibrarySystem.Infrastructure.EFCore/LibrarySystem.infrastructure.EFCore.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "LibrarySystem.Domain >= 1.0.0",
-      "Microsoft.EntityFrameworkCore.Design >= 8.0.10",
-      "Npgsql.EntityFrameworkCore.PostgreSQL >= 8.0.10"
+      "LibrarySystem.infrastructure.EFCore >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2218,9 +2237,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/LibrarySystem.Infrastructure.csproj",
-      "projectName": "LibrarySystem.Infrastructure",
-      "projectPath": "/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/LibrarySystem.Infrastructure.csproj",
+      "projectUniqueName": "/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/LibrarySystem.infrastructure.csproj",
+      "projectName": "LibrarySystem.infrastructure",
+      "projectPath": "/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/LibrarySystem.infrastructure.csproj",
       "packagesPath": "/home/hamza-juwaihan/.nuget/packages/",
       "outputPath": "/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure/obj/",
       "projectStyle": "PackageReference",
@@ -2239,6 +2258,9 @@
           "projectReferences": {
             "/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Domain/LibrarySystem.Domain.csproj": {
               "projectPath": "/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Domain/LibrarySystem.Domain.csproj"
+            },
+            "/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure.EFCore/LibrarySystem.infrastructure.EFCore.csproj": {
+              "projectPath": "/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Infrastructure.EFCore/LibrarySystem.infrastructure.EFCore.csproj"
             }
           }
         }
@@ -2252,16 +2274,6 @@
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Design": {
-            "target": "Package",
-            "version": "[8.0.10, )"
-          },
-          "Npgsql.EntityFrameworkCore.PostgreSQL": {
-            "target": "Package",
-            "version": "[8.0.10, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",

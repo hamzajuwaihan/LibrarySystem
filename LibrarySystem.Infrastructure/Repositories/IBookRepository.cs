@@ -1,7 +1,7 @@
 using LibrarySystem.Domain.Entities;
 
 
-namespace LibrarySystem.Infrastructure.Repositories;
+namespace LibrarySystem.infrastructure.Repositories;
 /// <summary>
 /// Contract for Book Repository
 /// </summary>

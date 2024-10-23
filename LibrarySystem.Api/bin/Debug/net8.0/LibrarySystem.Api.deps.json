@@ -12,7 +12,7 @@
           "FluentValidation.DependencyInjectionExtensions": "11.10.0",
           "LibrarySystem.Application": "1.0.0",
           "LibrarySystem.Domain": "1.0.0",
-          "LibrarySystem.Infrastructure": "1.0.0",
+          "LibrarySystem.infrastructure": "1.0.0",
           "MediatR": "12.4.1",
           "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
           "Microsoft.AspNetCore.Mvc": "2.2.0",
@@ -1690,7 +1690,7 @@
       "LibrarySystem.Application/1.0.0": {
         "dependencies": {
           "LibrarySystem.Domain": "1.0.0",
-          "LibrarySystem.Infrastructure": "1.0.0"
+          "LibrarySystem.infrastructure": "1.0.0"
         },
         "runtime": {
           "LibrarySystem.Application.dll": {}
@@ -1704,14 +1704,23 @@
           "LibrarySystem.Domain.dll": {}
         }
       },
-      "LibrarySystem.Infrastructure/1.0.0": {
+      "LibrarySystem.infrastructure/1.0.0": {
+        "dependencies": {
+          "LibrarySystem.Domain": "1.0.0",
+          "LibrarySystem.infrastructure.EFCore": "1.0.0"
+        },
+        "runtime": {
+          "LibrarySystem.infrastructure.dll": {}
+        }
+      },
+      "LibrarySystem.infrastructure.EFCore/1.0.0": {
         "dependencies": {
           "LibrarySystem.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "8.0.10",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.10"
         },
         "runtime": {
-          "LibrarySystem.Infrastructure.dll": {}
+          "LibrarySystem.infrastructure.EFCore.dll": {}
         }
       }
     }
@@ -3034,7 +3043,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "LibrarySystem.Infrastructure/1.0.0": {
+    "LibrarySystem.infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LibrarySystem.infrastructure.EFCore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

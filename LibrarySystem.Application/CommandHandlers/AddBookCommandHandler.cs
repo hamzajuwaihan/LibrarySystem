@@ -1,7 +1,7 @@
 using LibrarySystem.Application.Commands;
 using LibrarySystem.Domain.Entities;
 using LibrarySystem.Domain.ValueObjects;
-using LibrarySystem.Infrastructure.Repositories;
+using LibrarySystem.infrastructure.Repositories;
 using MediatR;
 
 namespace LibrarySystem.Application.CommandHandlers;
