@@ -1,0 +1,59 @@
+# Visual Studio
+.vs/
+*.sln
+*.user
+*.suo
+*.userprefs
+*.dll
+*.exe
+*.pdb
+*.obj
+*.appx
+*.appxbundle
+*.appxupload
+*.apk
+*.ipa
+*.publish/
+*.cache
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+[Rr]eleases/
+[Oo]ut/
+[Oo]ut/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio Code
+.vscode/
+.history/
+
+# Rider
+.idea/
+*.sln.iml
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
+# Azure DevOps
+*.tfignore
+*.tfstate
+*.tfstate.*
+*.tfsync
+**/bin/
+**/obj/
+
+# ASP.NET specific files
+project.lock.json
+project.fragment.lock.json
+
+# NuGet
+*.nupkg
+**/packages/*
+*.nuspec
+**/project.lock.json
+
+# Entity Framework
+Migrations/

@@ -1,9 +1,3 @@
-/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/obj/Debug/net8.0/LibrarySystem.Application.csproj.AssemblyReference.cache
-/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/obj/Debug/net8.0/LibrarySystem.Application.GeneratedMSBuildEditorConfig.editorconfig
-/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/obj/Debug/net8.0/LibrarySystem.Application.AssemblyInfoInputs.cache
-/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/obj/Debug/net8.0/LibrarySystem.Application.AssemblyInfo.cs
-/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/obj/Debug/net8.0/LibrarySystem.Application.csproj.CoreCompileInputs.cache
-/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/obj/Debug/net8.0/LibrarySystem.Application.sourcelink.json
 /home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/bin/Debug/net8.0/LibrarySystem.Application.deps.json
 /home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/bin/Debug/net8.0/LibrarySystem.Application.dll
 /home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/bin/Debug/net8.0/LibrarySystem.Application.pdb
@@ -13,6 +7,12 @@
 /home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/bin/Debug/net8.0/LibrarySystem.Domain.pdb
 /home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/bin/Debug/net8.0/LibrarySystem.infrastructure.pdb
 /home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/bin/Debug/net8.0/LibrarySystem.infrastructure.EFCore.pdb
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/obj/Debug/net8.0/LibrarySystem.Application.csproj.AssemblyReference.cache
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/obj/Debug/net8.0/LibrarySystem.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/obj/Debug/net8.0/LibrarySystem.Application.AssemblyInfoInputs.cache
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/obj/Debug/net8.0/LibrarySystem.Application.AssemblyInfo.cs
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/obj/Debug/net8.0/LibrarySystem.Application.csproj.CoreCompileInputs.cache
+/home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/obj/Debug/net8.0/LibrarySystem.Application.sourcelink.json
 /home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/obj/Debug/net8.0/LibrarySystem.Application.csproj.CopyComplete
 /home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/obj/Debug/net8.0/LibrarySystem.Application.dll
 /home/hamza-juwaihan/Documents/DDDTutorial/LibrarySystem.Application/obj/Debug/net8.0/refint/LibrarySystem.Application.dll

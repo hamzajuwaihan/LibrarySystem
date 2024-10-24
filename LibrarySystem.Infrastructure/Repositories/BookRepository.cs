@@ -15,19 +15,14 @@ public class BookRepository(DbAppContext context) : IBookRepository
     /// </summary>
     /// <param name="id"></param>
     /// <returns>Book Object</returns>
-    public async Task<Book?> GetByIdAsync(Guid id)
-    {
-        return await _context.Books.FindAsync(id);
-    }
+    public async Task<Book?> GetByIdAsync(Guid id) => await _context.Books.FindAsync(id);
+
 
     /// <summary>
     /// Gets all books in DB
     /// </summary>
     /// <returns>List of Books</returns>
-    public async Task<IEnumerable<Book>> GetAllAsync()
-    {
-        return await _context.Books.ToListAsync();
-    }
+    public async Task<IEnumerable<Book>> GetAllAsync() => await _context.Books.ToListAsync();
     /// <summary>
     /// Takes a book and add it to DB
     /// </summary>

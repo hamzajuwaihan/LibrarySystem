@@ -592,6 +592,7 @@
       "LibrarySystem.infrastructure.EFCore/1.0.0": {
         "dependencies": {
           "LibrarySystem.Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "8.0.10",
           "Microsoft.EntityFrameworkCore.Design": "8.0.10",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.10"
         },

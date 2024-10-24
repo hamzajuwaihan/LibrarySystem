@@ -1,5 +1,4 @@
 using MediatR;
-
 namespace LibrarySystem.Application.Commands;
 /// <summary>
 /// Delete book command to send for MideatR

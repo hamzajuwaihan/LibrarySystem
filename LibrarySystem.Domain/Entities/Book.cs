@@ -14,7 +14,22 @@ public class Book : Entity
     public int AvailableCopies { get; private set; }
 
     // Private constructor for EF Core
-    private Book() : base(Guid.NewGuid()) { }
+    private Book() : base(Guid.Empty) { }
+
+    public Book(Guid id, string title, Guid authorId, ISBN isbn, DateTime publishedDate, int availableCopies)
+     : base(id)  // Pass id to the Entity base class
+    {
+        if (string.IsNullOrWhiteSpace(title))
+        {
+            throw new ArgumentException("Title cannot be null or empty.", nameof(title));
+        }
+
+        Title = title;
+        AuthorId = authorId;
+        ISBN = isbn ?? throw new ArgumentNullException(nameof(isbn), "ISBN cannot be null.");
+        PublishedDate = publishedDate;
+        AvailableCopies = availableCopies;
+    }
 
     /// <summary>
     /// Factory method to create new Book Object
@@ -42,11 +57,35 @@ public class Book : Entity
 
         return new Book
         {
+            Id = id,
             Title = title,
             AuthorId = authorId,
             ISBN = isbn,
             PublishedDate = publishedDate,
             AvailableCopies = availableCopies
         };
+    }
+
+    public void UpdateDetails(string? title, ISBN? isbn, DateTime? publishedDate, int? availableCopies)
+    {
+        if (!string.IsNullOrEmpty(title))
+        {
+            Title = title;
+        }
+
+        if (isbn != null)
+        {
+            ISBN = isbn;
+        }
+
+        if (publishedDate.HasValue && publishedDate.Value <= DateTime.Now)
+        {
+            PublishedDate = publishedDate.Value;
+        }
+
+        if (availableCopies.HasValue && availableCopies.Value >= 0)
+        {
+            AvailableCopies = availableCopies.Value;
+        }
     }
 }

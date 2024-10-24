@@ -1,17 +1,16 @@
-using FluentValidation;
 using LibrarySystem.Application.Commands;
+using FluentValidation;
 
 namespace LibrarySystem.Presentation.Api.Abstractions;
-/// <summary>
-/// Class to add validation for add book command
-/// </summary>
-public class AddBookCommandValidator : AbstractValidator<AddBookCommand>
+
+public class PatchBookCommandValidator : AbstractValidator<PatchBookCommand>
 {
     /// <summary>
-    /// Define business validation for add book command
+    /// Patch command validation logic
     /// </summary>
-    public AddBookCommandValidator()
+    public PatchBookCommandValidator()
     {
+
         RuleFor(command => command.Title)
             .NotEmpty().WithMessage("Title is required")
             .MaximumLength(100).WithMessage("Title cannot be longer than 100 characters");
@@ -31,4 +30,5 @@ public class AddBookCommandValidator : AbstractValidator<AddBookCommand>
         RuleFor(command => command.PublishedDate)
             .NotEmpty().WithMessage("Published date is required");
     }
+
 }

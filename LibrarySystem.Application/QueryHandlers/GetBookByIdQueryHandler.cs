@@ -22,10 +22,7 @@ public class GetBookByIdQueryHandler(IBookRepository bookRepository) : IRequestH
     {
         var book = await _bookRepository.GetByIdAsync(request.BookId);
 
-        if (book == null)
-        {
-            Console.WriteLine($"Book with id {request.BookId} not found.");
-        }
+        if (book == null) return null;
 
         return book;
     }

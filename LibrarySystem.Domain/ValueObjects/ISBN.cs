@@ -6,10 +6,8 @@ public class ISBN(string value)
 
     public override bool Equals(object? obj)
     {
-        if (obj is ISBN isbn)
-        {
-            return Value == isbn.Value;
-        }
+        if (obj is ISBN isbn)  return Value == isbn.Value;
+        
         return false;
     }
 
